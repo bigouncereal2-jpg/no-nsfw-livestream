@@ -1,0 +1,30 @@
+Stream Failsafe application source is provided under AGPL-3.0. The repository root contains the app and build script. In the Windows ZIP, these files are in the Source folder. The build script fetches the exact versions of the two unmodified model files bundled in the executable.
+
+NudeNet 320n is from notAI-tech, distributed under AGPL-3.0. The weights were obtained from the unmodified nudenet 3.4.2 PyPI wheel. Upstream source and model files are linked below.
+https://github.com/notAI-tech/NudeNet/tree/v3
+https://pypi.org/project/nudenet/3.4.2/#files
+
+Image Safety Classifier XS is by Owen Elliott. The upstream repository identifies the license as MIT.
+https://huggingface.co/OwenElliott/image-safety-classifier-xs/tree/54f4560bd9c5ee92d45dc30418a8f8680e80de6d
+
+MIT License
+
+Copyright (c) Owen Elliott
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
