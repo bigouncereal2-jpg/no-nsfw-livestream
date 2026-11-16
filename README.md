@@ -8,10 +8,10 @@ Stream Failsafe screens outgoing Windows display capture for nudity, sexual cont
 
 ## Set up OBS
 
-1. Extract the Windows package and open `Stream Failsafe.exe`. It starts with a black output.
-2. Make a fresh OBS scene. Put a full-canvas black Color Source under a Browser Source pointing to `http://127.0.0.1:18761/`. Use your canvas dimensions for the Browser Source.
+1. Extract the Windows package, open `Stream Failsafe.exe`, and click **OBS setup** for the in-app guide. The output starts black.
+2. Click **Copy URL**. In a fresh OBS scene, put a full-canvas black Color Source under a Browser Source and paste the URL. Use your canvas dimensions for the Browser Source. The app shows **Connected** once a browser source opens the feed.
 3. Remove direct captures of the monitored display from the broadcast scene, including nested scenes. If the preview appears in the capture, disable the preview or move OBS to a different monitor.
-4. Pick a display and select **Arm**. Make a local OBS recording to verify normal video, **Test blackout**, and **Ctrl+Shift+F10**.
+4. Pick a display and select **Arm protection**. Make a local OBS recording to verify normal video, **Test blackout**, and **Ctrl+Shift+F10**. After a blackout, click **Arm protection** again when ready.
 
 ## Stream to Twitch or TikTok LIVE
 

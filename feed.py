@@ -1,7 +1,7 @@
 import asyncio
 from http import HTTPStatus
 from pathlib import Path
-from threading import Event
+from threading import Event, Lock
 
 from websockets.asyncio.server import serve
 from websockets.exceptions import ConnectionClosed
@@ -14,7 +14,14 @@ class FeedServer:
         self.gate = gate
         self.ready = Event()
         self.error = None
+        self._clients = 0
+        self._clients_lock = Lock()
         self.html = (Path(__file__).resolve().parent / "source.html").read_text(encoding="utf-8")
+
+    @property
+    def connected(self):
+        with self._clients_lock:
+            return self._clients > 0
 
     def run(self):
         try:
@@ -63,6 +70,8 @@ class FeedServer:
         last_sequence = 0
         showing_black = False
         awaiting_ack = False
+        with self._clients_lock:
+            self._clients += 1
         try:
             while True:
                 if read.done():
@@ -84,5 +93,7 @@ class FeedServer:
         except (ConnectionClosed, TimeoutError):
             return
         finally:
+            with self._clients_lock:
+                self._clients -= 1
             read.cancel()
             await asyncio.gather(read, return_exceptions=True)
